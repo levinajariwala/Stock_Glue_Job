@@ -13,6 +13,6 @@ Resources:
       ExecutionProperty:
         MaxConcurrentRuns: 2
       MaxRetries: 0
-      Name: YourGlueJobName
+      Name: Stock_incremental_1
       Description: Your Glue Job Description
       Timeout: 10
