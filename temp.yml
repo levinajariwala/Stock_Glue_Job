@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  GlueJob:
+    Type: AWS::Glue::Job
+    Properties:
+      Command:
+        Name: glueetl
+        ScriptLocation: s3://your-bucket/your-glue-script.py
+      Role: arn:aws:iam::your-account-id:role/your-glue-role
+      DefaultArguments:
+        "--key1": "value1"
+        "--key2": "value2"
+      ExecutionProperty:
+        MaxConcurrentRuns: 2
+      MaxRetries: 0
+      Name: YourGlueJobName
+      Description: Your Glue Job Description
+      Timeout: 10
